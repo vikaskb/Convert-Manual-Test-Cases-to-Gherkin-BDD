@@ -1,0 +1,49 @@
+[
+    {
+        "Test Case Id": "Upshow test case 1",
+        "Description": "Verify the Upshow pipeline is present",
+        "Test Details": [
+            {
+                "Test Step": 1,
+                "Step Action": "Login to ADF pipeline",
+                "Expected Result": "Login should be successful"
+            },
+            {
+                "Test Step": 2,
+                "Step Action": "Search for the pipeline pl_Upshow_export_DnB",
+                "Expected Result": "The pipeline should be searchable."
+            },
+            {
+                "Test Step": 3,
+                "Step Action": "Open the pipeline",
+                "Expected Result": "User should be able to open and view the Pipeline"
+            }
+        ]
+    },
+    {
+        "Test Case Id": "Upshow test case 2",
+        "Description": "Verify the new table is created for the locations",
+        "Test Details": [
+            {
+                "Test Step": 1,
+                "Step Action": "Login to Databricks and open SQL editor",
+                "Expected Result": "Login should be successful"
+            },
+            {
+                "Test Step": 2,
+                "Step Action": "Run the sql Query: select * from gold_pos.Upshow_locations",
+                "Expected Result": "The table should be accessible."
+            },
+            {
+                "Test Step": 3,
+                "Step Action": "Verify the data in the table.",
+                "Expected Result": "The table should be loaded with all DnB stores location data that are required to be sent to Upshow."
+            },
+            {
+                "Test Step": 4,
+                "Step Action": "Compare the location data that is loaded to this table is matching with the original location table. sandbox_pos.dim_location",
+                "Expected Result": "The location IDs, names should match from the original table."
+            }
+        ]
+    }
+]
