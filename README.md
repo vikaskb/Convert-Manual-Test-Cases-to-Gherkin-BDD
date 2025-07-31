@@ -1,12 +1,12 @@
 
-# Automate Regression Test Case Conversion to Gherkin
+# Convert manual test cases to Gherkin BDD
 
 This project demonstrates how to automate the conversion of manual regression test cases into Gherkin-style BDD feature files using AI-powered automation.
 
 ## Project Structure
 
 - **data/**: Contains sample data (Excel and JSON file) for regression test cases.
-- **utils/**: Includes utility scripts for reading files, AI processing and writing feature files.
+- **utils/**: Includes utility scripts for reading files, AI processing, and writing feature files.
 - **README.md**: Project documentation.
 
 ## Tools & Technologies
